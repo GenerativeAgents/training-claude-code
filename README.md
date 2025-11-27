@@ -1,1 +1,1 @@
-# training-claude-code-starter
+# training-claude-code
