@@ -42,3 +42,11 @@ cat << 'EOF' > ~/.claude/settings.json
   "apiKeyHelper": "echo $ANTHROPIC_API_KEY"
 }
 EOF
+
+# code-serverの設定を追加
+mkdir -p ~/.local/share/code-server/User
+cat << 'EOF' > ~/.local/share/code-server/User/settings.json
+{
+    "terminal.integrated.stickyScroll.enabled": false
+}
+EOF
