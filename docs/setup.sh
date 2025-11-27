@@ -30,3 +30,14 @@ nvm install 24.11.1
 
 # Playwrightの依存関係のインストール
 npx --yes playwright install-deps chromium
+
+# Claude Codeがインストールされるパスを追加
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+
+# Claude CodeをANTHROPIC_API_KEYで認証するための設定を追加
+# 参考: https://www.reddit.com/r/ClaudeAI/comments/1jwvssa/comment/mtt0urz/
+cat << 'EOF' > ~/.claude/settings.json
+{
+  "apiKeyHelper": "echo $ANTHROPIC_API_KEY"
+}
+EOF
