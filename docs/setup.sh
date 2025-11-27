@@ -10,9 +10,6 @@ if [ "$(whoami)" != "ubuntu" ]; then
   exit 1
 fi
 
-# Claude Codeのインストール
-curl -fsSL https://claude.ai/install.sh | bash
-
 # GitHub CLIのインストール
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
 	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
