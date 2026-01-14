@@ -34,15 +34,6 @@ npx --yes playwright install-deps chromium
 # Claude Codeがインストールされるパスを追加
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 
-# Claude CodeをANTHROPIC_API_KEYで認証するための設定を追加
-# 参考: https://www.reddit.com/r/ClaudeAI/comments/1jwvssa/comment/mtt0urz/
-mkdir -p ~/.claude
-cat << 'EOF' > ~/.claude/settings.json
-{
-  "apiKeyHelper": "echo $ANTHROPIC_API_KEY"
-}
-EOF
-
 # code-serverの設定を追加
 mkdir -p ~/.local/share/code-server/User
 cat << 'EOF' > ~/.local/share/code-server/User/settings.json
