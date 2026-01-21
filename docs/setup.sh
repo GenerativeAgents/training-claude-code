@@ -39,7 +39,7 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 mkdir -p ~/.claude
 cat << 'EOF' > ~/.claude/settings.json
 {
-  "apiKeyHelper": "echo $ANTHROPIC_API_KEY"
+  "apiKeyHelper": "grep '^ANTHROPIC_API_KEY=' .env | cut -d'=' -f2-"
 }
 EOF
 
