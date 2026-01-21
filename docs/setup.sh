@@ -43,6 +43,18 @@ cat << 'EOF' > ~/.claude/settings.json
 }
 EOF
 
+# Claude CodeのCPU・メモリの制限を設定
+cat << 'EOF' >> ~/.bashrc
+claude() {
+  sudo systemd-run --quiet --pty \
+    -p "User=$(id -un)" -p "Group=$(id -gn)" \
+    -p "WorkingDirectory=$PWD" \
+    -p "CPUQuota=${CLAUDE_CPU_QUOTA:-100%}" \
+    -p "MemoryMax=${CLAUDE_MEM_MAX:-2G}" \
+    -- "$(type -P claude)" "$@"
+}
+EOF
+
 # code-serverの設定を追加
 mkdir -p ~/.local/share/code-server/User
 cat << 'EOF' > ~/.local/share/code-server/User/settings.json
