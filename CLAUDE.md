@@ -2,4 +2,4 @@
 
 シンプルなタスク管理アプリケーションです。
 
-@import .claude/rules.md
+@.claude/rules.md
