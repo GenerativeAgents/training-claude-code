@@ -51,7 +51,7 @@ claude() {
     -p "WorkingDirectory=$PWD" \
     -p "CPUQuota=${CLAUDE_CPU_QUOTA:-100%}" \
     -p "MemoryMax=${CLAUDE_MEM_MAX:-2G}" \
-    -- "$(type -P claude)" "$@"
+    -- /bin/bash -ic 'exec "$(command -v claude)" "$@"' -- "$@"
 }
 EOF
 
