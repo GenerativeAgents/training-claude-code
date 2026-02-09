@@ -62,3 +62,7 @@ cat << 'EOF' > ~/.local/share/code-server/User/settings.json
     "terminal.integrated.stickyScroll.enabled": false
 }
 EOF
+
+# Claude Codeのインストール
+curl -fsSL https://claude.ai/install.sh | bash
+claude --version
