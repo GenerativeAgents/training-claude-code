@@ -65,4 +65,3 @@ EOF
 
 # Claude Codeのインストール
 curl -fsSL https://claude.ai/install.sh | bash
-claude --version
