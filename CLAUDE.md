@@ -32,7 +32,7 @@
   - API設計（将来的にバックエンドと連携する場合）
 
 - **architecture.md** - 技術仕様書
-  - テクノロジースタック
+  - テクノロジースタック: Next.js (App Router) / TypeScript / Tailwind CSS / npm
   - 開発ツールと手法
   - 技術的制約と要件
   - パフォーマンス要件
