@@ -31,6 +31,9 @@ nvm install 24.11.1
 # Playwrightの依存関係のインストール
 npx --yes playwright install-deps chromium
 
+# jqのインストール
+sudo apt-get install -y jq
+
 # Claude Codeがインストールされるパスを追加
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 
