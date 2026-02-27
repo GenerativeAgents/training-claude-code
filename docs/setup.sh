@@ -68,3 +68,11 @@ EOF
 
 # Claude Codeのインストール
 curl -fsSL https://claude.ai/install.sh | bash
+
+# Visual Studio Codeの拡張機能のインストール
+recommendations=(
+  "bierner.markdown-mermaid"
+)
+for recommendation in "${recommendations[@]}"; do
+  code-server --install-extension "${recommendation}" --force
+done
