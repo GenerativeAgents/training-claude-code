@@ -47,3 +47,16 @@ for stack_name in $stack_names; do
   echo "${password}"
 done
 ```
+
+## EC2インスタンスの強制再起動
+
+Claude CodeがCPUを使いすぎることで、ハンズオン環境にアクセスできなくなるケースがあります。
+その場合、EC2インスタンスを強制的に停止して再起動してください。
+
+1. インスタンスの停止
+   - EC2インスタンスの一覧画面でインスタンスを選択して、「インスタンスの状態」>「インスタンスの停止」
+   - **インスタンスの停止のポップアップでは「OS のシャットダウンをスキップ」を選択**
+2. インスタンスの開始
+   - EC2インスタンスの一覧画面でインスタンスを選択して、「インスタンスの状態」>「インスタンスの開始」
+3. CloudFrontのオリジンを更新
+   - <https://github.com/GenerativeAgents/training-llm-application-development-starter/blob/main/docs/ec2_code_server.md#ec2-%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%86%8D%E8%B5%B7%E5%8B%95%E6%99%82%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85>
