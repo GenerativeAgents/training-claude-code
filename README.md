@@ -1,8 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## はじめかた
 
-First, run the development server:
+まず、開発サーバーを起動します：
 
 ```bash
 npm run dev
@@ -14,11 +14,13 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで以下にアクセス：
 
-If you are running behind a proxy (e.g. code-server), you may need to set `basePath` in `next.config.ts` and access via the proxy path.
+- http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+※ code-server などのプロキシ配下で動かす場合は、環境に応じて `next.config.ts` の `basePath` を設定し、プロキシのURLでアクセスしてください。
+
+`src/app/page.tsx` を編集すると自動で反映されます。
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
