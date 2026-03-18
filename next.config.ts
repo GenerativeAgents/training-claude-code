@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: "/absproxy/3000",
+  // NOTE: basePath is environment-dependent (e.g. code-server proxy).
+  // Keep it unset by default; configure it in your environment when needed.
 };
 
 export default nextConfig;

@@ -14,11 +14,9 @@ pnpm dev
 bun dev
 ```
 
-Open the app via code-server proxy:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- http://localhost:3000/absproxy/3000/
-
-(We use `/absproxy/3000` + `basePath` so links and static assets work correctly behind the proxy.)
+If you are running behind a proxy (e.g. code-server), you may need to set `basePath` in `next.config.ts` and access via the proxy path.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
