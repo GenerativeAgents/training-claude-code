@@ -62,7 +62,9 @@ EOF
 mkdir -p ~/.local/share/code-server/User
 cat << 'EOF' > ~/.local/share/code-server/User/settings.json
 {
-    "terminal.integrated.stickyScroll.enabled": false
+    "editor.stickyScroll.enabled": false,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "terminal.integrated.gpuAcceleration": "off"
 }
 EOF
 
