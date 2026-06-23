@@ -18,8 +18,6 @@ bun dev
 
 - http://localhost:3000
 
-※ code-server などのプロキシ配下で動かす場合は、環境に応じて `next.config.ts` の `basePath` を設定し、プロキシのURLでアクセスしてください。
-
 `src/app/page.tsx` を編集すると自動で反映されます。
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
