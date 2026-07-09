@@ -1,6 +1,3 @@
 {
-  "autoMemoryEnabled": false,
-  "permissions": {
-    "deny": ["mcp__playwright"]
-  }
+  "autoMemoryEnabled": false
 }
