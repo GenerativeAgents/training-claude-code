@@ -206,52 +206,51 @@ mkdir -p .steering/20250115-add-tag-feature
 ## 図表・ダイアグラムの記載ルール
 
 ### 記載場所
-設計図やダイアグラムは、関連する永続的ドキュメント内に直接記載します。
-独立したdiagramsフォルダは作成せず、手間を最小限に抑えます。
+設計図やダイアグラムは **SVGファイル** として `docs/images/` 以下に作成し、関連する永続的ドキュメントから画像参照します。
+Markdown内に直接図を記述（Mermaid記法やASCIIアート）するのではなく、必ずSVGファイルに分離します。
+
+**ファイル配置：**
+```
+docs/
+├── images/
+│   ├── er-diagram.svg
+│   ├── system-architecture.svg
+│   ├── screen-transition.svg
+│   └── usecase-diagram.svg
+├── functional-design.md
+└── ...
+```
 
 **配置例：**
-- ER図、データモデル図 → `functional-design.md` 内に記載
-- ユースケース図 → `functional-design.md` または `product-requirements.md` 内に記載
-- 画面遷移図、ワイヤフレーム → `functional-design.md` 内に記載
-- システム構成図 → `functional-design.md` または `architecture.md` 内に記載
+- ER図、データモデル図 → `docs/images/` にSVG作成し、`functional-design.md` から参照
+- ユースケース図 → `docs/images/` にSVG作成し、`functional-design.md` または `product-requirements.md` から参照
+- 画面遷移図、ワイヤフレーム → `docs/images/` にSVG作成し、`functional-design.md` から参照
+- システム構成図 → `docs/images/` にSVG作成し、`functional-design.md` または `architecture.md` から参照
 
-### 記述形式
-1. **Mermaid記法（推奨）**
-   - Markdownに直接埋め込める
-   - バージョン管理が容易
-   - ツール不要で編集可能
+### ファイル命名規則
+- 英小文字とハイフンで構成する（kebab-case）
+- 図の内容が分かる名前にする（例：`er-diagram.svg`、`screen-transition.svg`）
+- 1つのSVGファイルには1つの図のみを記載する
 
-```mermaid
-graph TD
-    A[ユーザー] --> B[タスク作成]
-    B --> C[タスク一覧]
-    C --> D[タスク編集]
-    C --> E[タスク削除]
+### Markdownからの参照方法
+Markdown の画像記法 `![代替テキスト](相対パス)` で参照します。
+パスはMarkdownファイルからの相対パスで記述します。
+
+```markdown
+## データモデル
+
+![ER図](./images/er-diagram.svg)
 ```
 
-2. **ASCII アート**
-   - シンプルな図表に使用
-   - テキストエディタで編集可能
-
-```
-┌─────────────┐
-│   Header    │
-└─────────────┘
-       │
-       ↓
-┌─────────────┐
-│  Task List  │
-└─────────────┘
-```
-
-3. **画像ファイル（必要な場合のみ）**
-   - 複雑なワイヤフレームやモックアップ
-   - `docs/images/` フォルダに配置
-   - PNG または SVG 形式を推奨
+### SVG作成時の注意
+- テキストエディタで編集可能なシンプルなSVGにする
+- 外部画像やフォントへの依存を避け、単体で表示できるようにする
+- 日本語テキストを含む場合は `font-family` にフォールバック（例：`sans-serif`）を指定する
 
 ### 図表の更新
-- 設計変更時は対応する図表も同時に更新
+- 設計変更時は対応するSVGファイルも同時に更新
 - 図表とコードの乖離を防ぐ
+- 参照されなくなったSVGファイルは削除する
 
 ## 注意事項
 
