@@ -20,4 +20,7 @@ tea issues create --title 'タイトル' --description '本文'
 
 更新などの詳しいオプションは `tea issues --help` と該当サブコマンドの `--help` で確認する。Gitのoriginとteaの接続先は、設定済みのローカルURLを維持する。Git操作は演習の `CLAUDE.md` とユーザーの指示に従う。
 
-新規環境でのWebログインは `student` / `password`。CLIのGit・tea認証は設定済み。認証トークンや個別の認証情報を表示したり、リポジトリへコミットしたりしない。
+新規環境でのWebログインはユーザー名 `student`、初期パスワードはcode-serverと同じ。
+URLとパスワードの確認方法は `exercises/claude-code-basics/README.md` を参照する。
+CLIのGitとteaの認証は設定済み。
+認証トークンを表示せず、パスワードやトークンをリポジトリへコミットしない。
