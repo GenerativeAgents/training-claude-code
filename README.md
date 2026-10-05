@@ -5,9 +5,7 @@
 | 演習 | フォルダ | 内容 |
 | --- | --- | --- |
 | Claude Codeの基礎 | [exercises/claude-code-basics](exercises/claude-code-basics/README.md) | 基本操作と外部サービス連携 |
-| 開発ルール | [exercises/dev-rule](exercises/dev-rule/README.md) | CLAUDE.mdや開発ルールを作る演習 |
 | 仕様駆動開発（SDD） | [exercises/sdd](exercises/sdd/README.md) | Next.jsの雛形から仕様を整理して実装 |
-| Vibe Coding | [exercises/vibe-coding](exercises/vibe-coding/README.md) | タスク管理アプリを使った演習 |
 
 ## 演習の開始
 
