@@ -8,4 +8,4 @@ claude
 ```
 
 認証設定と成果物の保存方法は [教材全体のREADME](../../README.md) を参照してください。
-設定の見本は [examples/claude-code](../../examples/claude-code/README.md) にあります。
+設定の見本は [examples](../../examples/README.md) にあります。

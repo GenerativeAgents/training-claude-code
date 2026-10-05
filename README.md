@@ -22,7 +22,7 @@
 3. `package.json` のある演習では `npm ci` を実行します。
 4. 同じターミナルで `claude` を起動します。開発サーバーの起動などは各演習のREADMEを参照してください。
 
-演習ごとに依存関係とClaude Codeの設定を管理します。設定やスキルの見本は [examples/claude-code](examples/claude-code/README.md) にあります。
+演習ごとに依存関係とClaude Codeの設定を管理します。設定やスキルの見本は [examples](examples/README.md) にあります。
 
 ## 保存と持ち帰り
 
@@ -31,4 +31,4 @@ Giteaを使う配布環境では、リポジトリ画面の「Code → Download 
 GitHubを使う場合は、リポジトリ画面の「Code → Download ZIP」から取得できます。
 ZIPには未コミット・未pushの変更とGit履歴は含まれません。`.env` と認証情報はコミットしないでください。
 
-従来の `hands-on/*` ブランチは既存の教材・受講者向けに残しています。新しい構成との対応と運営側の更新箇所は [移行メモ](docs/20261005-exercise-folders/README.md) を参照してください。
+従来の `hands-on/*` ブランチは既存の教材・受講者向けに残しています。

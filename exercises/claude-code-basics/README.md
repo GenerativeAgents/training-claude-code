@@ -15,4 +15,4 @@ tea issues list
 tea issues create --title 'READMEを更新する' --description 'READMEを更新してください'
 ```
 
-設定やスキルの見本は [examples/claude-code](../../examples/claude-code/README.md) にあります。
+設定やスキルの見本は [examples](../../examples/README.md) にあります。
