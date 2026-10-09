@@ -4,7 +4,7 @@
 
 code-serverのエディターでこのREADMEを開き、Ctrlキーを押しながら次のURLをクリックすると、Giteaが開きます。
 
-http://localhost:3001
+<http://localhost:3001/student/training-claude-code/src/branch/main/exercises/claude-code-basics>
 
 ユーザー名は `student`、初期パスワードはcode-serverへのログインに使ったパスワードと同じです。
 パスワードを確認するには、code-serverの「Terminal」→「New Terminal」でターミナルを開き、次のコマンドを実行してください。
