@@ -1,3 +1,16 @@
+# 仕様駆動開発（SDD）
+
+## pushしたソースコードの確認
+
+code-serverのエディターでこのREADMEを開き、Ctrlキーを押しながら次のURLをクリックすると、Giteaでこの演習のソースコードを確認できます。
+
+<http://localhost:3001/student/training-claude-code/src/branch/main/exercises/sdd>
+
+このURLは `main` ブランチを表示します。別のブランチにpushした場合は、Giteaの画面でそのブランチを選んでください。
+ログイン方法は [Claude Codeの基礎のREADME](../claude-code-basics/README.md#研修用giteaへのログイン) を参照してください。
+
+## プロジェクトについて
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## はじめかた

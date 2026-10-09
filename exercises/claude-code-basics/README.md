@@ -15,3 +15,11 @@ cat ~/.config/training-gitea/password
 
 表示されたパスワードをコピーして、Giteaのログイン画面に入力します。
 ログイン後は `student/training-claude-code` リポジトリを開いてください。
+
+## pushしたソースコードの確認
+
+code-serverのエディターでこのREADMEを開き、Ctrlキーを押しながら次のURLをクリックすると、Giteaでこの演習のソースコードを確認できます。
+
+<http://localhost:3001/student/training-claude-code/src/branch/main/exercises/claude-code-basics>
+
+このURLは `main` ブランチを表示します。別のブランチにpushした場合は、Giteaの画面でそのブランチを選んでください。
