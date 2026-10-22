@@ -10,6 +10,11 @@ if [ "$(whoami)" != "ubuntu" ]; then
   exit 1
 fi
 
+# 外部ツールを取得する前にOSの信頼ストアを更新する（Ubuntu 22.04 / USN-8944-1）。
+sudo apt-get update
+sudo apt-get install -y ca-certificates
+dpkg --compare-versions "$(dpkg-query -W -f='${Version}' ca-certificates)" ge '20260816ubuntu0.22.04.1'
+
 # GitHub CLIのインストール
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
 	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
@@ -26,7 +31,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-nvm install 24.11.1
+nvm install 24.22.1
 
 # Playwrightの依存関係のインストール
 npx --yes playwright install-deps chromium
