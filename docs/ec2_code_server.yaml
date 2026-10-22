@@ -385,6 +385,11 @@ Resources:
           set -o pipefail
           set -o xtrace
 
+          # Update OS trust before downloading external tools (Ubuntu 22.04 / USN-8944-1).
+          sudo apt-get update
+          sudo apt-get install -y ca-certificates
+          dpkg --compare-versions "$(dpkg-query -W -f='${!Version}' ca-certificates)" ge '20260816ubuntu0.22.04.1'
+
           # Install AWS CLI
           snap install aws-cli --classic
           aws --version
